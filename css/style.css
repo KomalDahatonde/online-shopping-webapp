@@ -38,6 +38,7 @@ body {
 	font-smoothing: antialiased;
 }
 
+
 h1,
 h2,
 h3,
@@ -415,6 +416,11 @@ ol {
 
 .header__logo a {
 	display: inline-block;
+}
+@media screen and (max-width: 768px){
+	.header__logo a {
+		display: none;
+	}	
 }
 
 .header__menu {
