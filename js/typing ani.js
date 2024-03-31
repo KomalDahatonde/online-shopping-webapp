@@ -1,4 +1,4 @@
-const words = ['Food items' , 'Clothes items', 'Electronic items']; // Add more words here if needed
+const words = ['Food items' , 'Clothes items', 'Electronic items', 'Skin care items', 'Home decor items', 'Learning toys']; // Add more words here if needed
  let wordIndex = 0;
  let letterIndex = 0;
  let currentWord = '';
