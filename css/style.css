@@ -647,9 +647,12 @@ ol {
 }
 
 .hero__search__form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 610px;
 	height: 50px;
-	border: 1px solid #ebebeb;
+	border: 0px solid #ebebeb;
 	position: relative;
 	float: left;
 }
@@ -3474,3 +3477,95 @@ ol {
 		font-size: 24px;
 	}
 }
+
+
+/* typing animation css */
+
+.typing-text {
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+    color: #D98880;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+
+  .typing-animation sup {
+    font-size: 70%; /* Adjust the size of the superscript here */
+    vertical-align: super;
+  }
+
+  .cursor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.1em;
+    height: 1.1em;
+    background-color: orange; /* Change the color of cursor here */
+    animation: blink-caret .75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from, to {
+      background-color: transparent;
+    }
+    50% {
+      background-color: orange; /* Change the color of cursor here */
+    }
+  }
+
+ /* Media query for adjusting font size at different screen widths */
+@media screen and (max-width: 1200px) {
+	.typing-text {
+		font-size: 30px;
+		font-family: Arial, sans-serif;
+		color: #D98880;
+		margin-bottom: 20px;
+		position: relative;
+	  }
+  }
+  
+  @media screen and (max-width: 992px) {
+	.typing-text {
+		font-size: 25px;
+		font-family: Arial, sans-serif;
+		color: #D98880;
+		margin-bottom: 20px;
+		position: relative;
+	  }
+  }
+  
+  @media screen and (max-width: 768px) {
+	.typing-text {
+		font-size: 20px;
+		font-family: Arial, sans-serif;
+		color: #D98880;
+		margin-bottom: 20px;
+		position: relative;
+	  }
+  }
+  
+  @media screen and (max-width: 480px) {
+	.typing-text {
+		font-size: 16px;
+		font-family: Arial, sans-serif;
+		color: #D98880;
+		margin-bottom: 20px;
+		position: relative;
+	  }
+  }
