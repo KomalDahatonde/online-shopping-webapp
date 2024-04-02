@@ -3582,4 +3582,20 @@ ol {
 	border-radius: 3px; 
 	font-weight: 500;
   }
+  .slider-image{
+	width: 20px;
+	height: 100px;
+  }
+  .slider-btn-shop-page{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 25px;
+	width: 50px;
+	color: white;
+	background-color: #D98880;
+	border: none;
+	border-radius: 5px;
+  }
  
