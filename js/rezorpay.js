@@ -1,74 +1,363 @@
-
-// Get Product name 
-// const productName = document.getElementById('pname').innerText;
-
-function initiateRazorpayPayment(price) {
-
-//    const UserAddress = document.getElementById('address').value;
-
-   // Assuming you have the Razorpay API integration script loaded in your HTML
-  
-   // Create a Razorpay options object
-   const options = {
-       key: 'rzp_test_sJpyjaezMQUgYU',
-       amount: price * 100,// amount in paise (100 paise = 1 INR)
-           currency: 'INR',
-           name: 'TrendMart',
-           description: 'productName',
-           image: '/images/logo.png',
-           appname: 'TrendMart', // Add your app name here
-           appid: '1.0',
-         //   order_id: '' , // generate a unique order ID on your server
-        handler: function (response) {
-         redirectToMyOrder(response, productName, price);
-         alert('Payment successful! Payment ID: ' + response.razorpay_payment_id);
-           },
-           prefill: {
-              name: 'John Doe',
-              email: 'john@example.com',
-              contact: '9265952630'
-           },
-           notes: {
-              address: UserAddress
-           },  
-           
-
-           theme: {
-              color: '#007bff'
-           }
-          
-        };
-     
-   
-      const razorpayInstance = new Razorpay(options);
-    razorpayInstance.open();
-
-      }
-
-      var payment_status = 100;
+document.getElementById('paymentButton').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
 
 
-// function redirectToMyOrder(response, productName, price, payment_status) {
-//    // Retrieve existing orders from localStorage
-//    const storedOrders = JSON.parse(localStorage.getItem('orderDetails')) || [];
+//payment btn 2
+document.getElementById('paymentButton2').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
 
-//    // Make sure 'orders' is always an array
-//    const orders = Array.isArray(storedOrders) ? storedOrders : [];
+//payment btn 3
+document.getElementById('paymentButton3').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
 
-//    // Save order details in localStorage for retrieval on MyOrder.html
-//    const orderDetails = {
-//        orderId: response.razorpay_payment_id,
-//        productName: productName,
-//        price: price,
-//        payment_status: payment_status,
-//    };
+//payment btn 4
+document.getElementById('paymentButton4').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
 
-//    // Add the new orderDetails to the orders array
-//    orders.push(orderDetails);
+//payment btn 5
+document.getElementById('paymentButton5').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
 
-//    // Store updated orders array back in localStorage
-//    localStorage.setItem('orderDetails', JSON.stringify(orders));
 
-//    // Redirect to MyOrder.html
-//    window.location.href = '/ProductBuyPage/MyOrders.html';
-// }
+
+
+//payment btn 6
+document.getElementById('paymentButton6').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
+
+
+
+
+//payment btn 7
+document.getElementById('paymentButton7').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
+
+
+
+//payment btn 8
+document.getElementById('paymentButton8').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
+
+
+
+//payment btn 9
+document.getElementById('paymentButton9').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
+
+
+
+//payment btn 10
+document.getElementById('paymentButton10').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
+
+
+
+//payment btn 11
+document.getElementById('paymentButton11').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
+
+
+
+//payment btn 12
+document.getElementById('paymentButton12').addEventListener('click', function() {
+   var options = {
+       "key": "rzp_test_sJpyjaezMQUgYU",
+       "amount": 8000, // amount in paise (100 paise = 1 INR)
+       "currency": "INR",
+       "name": "TRAND MART",
+       "description": "Purchase Description",
+       "image": "https://example.com/your_logo.png",
+       "handler": function(response) {
+           alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
+           // You can handle the success callback here, like updating the database or redirecting to a thank you page
+       },
+       "prefill": {
+           "name": "Customer Name",
+           "email": "customer@example.com",
+           "contact": "9999999999"
+       },
+       "notes": {
+           "address": "Customer Address"
+       },
+       "theme": {
+           "color": "#D98880"
+       }
+   };
+   var rzp = new Razorpay(options);
+   rzp.open();
+});
