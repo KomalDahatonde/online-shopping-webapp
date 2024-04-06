@@ -3,7 +3,7 @@ document.querySelectorAll('.paymentButton').forEach(function(element) {
    element.addEventListener('click', function(event) {
        var options = {
            "key": "rzp_test_sJpyjaezMQUgYU",
-           "amount": 50000, // amount in paise (100 paise = 1 INR)
+           "amount": 8000, // amount in paise (100 paise = 1 INR)
            "currency": "INR",
            "name": "TREND MART",
            "description": "Purchase Description",
