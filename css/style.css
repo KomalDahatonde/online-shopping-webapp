@@ -468,8 +468,8 @@ ol {
 }
 
 .header__menu ul li.active a {
-	color: #D98880;
-}
+	/* color: #D98880; */
+}1
 
 .header__menu ul li:hover .header__menu__dropdown {
 	top: 30px;
