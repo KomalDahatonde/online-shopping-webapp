@@ -3644,4 +3644,7 @@ ol {
 	  flex: 0 0 100%;
 	  max-width: 100%;
 	}
+	.product-details {
+	  padding: 10px;
+	}
   }
