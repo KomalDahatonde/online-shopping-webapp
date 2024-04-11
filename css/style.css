@@ -3639,6 +3639,10 @@ ol {
 .buy-now-btn {
     width: 100%;
 }
+.buy-now-btn:hover{
+    width: 100%;
+	color: #fff;
+}
 
 @media (max-width: 767px) {
 	.product-img {
