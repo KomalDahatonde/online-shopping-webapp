@@ -3637,10 +3637,7 @@ ol {
 	  flex: 0 0 100%;
 	  max-width: 100%;
 	}
-	.product-details {
-	  flex: 0 0 100%;
-	  max-width: 100%;
-	}
+	.product-details,
 	.product-price {
 	  flex: 0 0 100%;
 	  max-width: 100%;
