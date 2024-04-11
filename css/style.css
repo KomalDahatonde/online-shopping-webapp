@@ -3610,15 +3610,18 @@ ol {
   .product-img {
 	flex: 0 0 30%;
 	max-width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
   }
   .product-details {
-	flex: 0 0 50%;
-	max-width: 50%;
+	flex: 0 0 70%;
+	max-width: 70%;
 	padding: 20px;
   }
   .product-price {
-	flex: 0 0 20%;
-	max-width: 20%;
+	flex: 0 0 100%;
+	max-width: 100%;
 	padding: 20px;
 	background-color: #f8f9fa;
 	display: flex;
@@ -3633,12 +3636,11 @@ ol {
 	width: 100%;
   }
   @media (max-width: 767px) {
-	.product-img {
-	  flex: 0 0 100%;
-	  max-width: 100%;
+	.product-card {
+	  display: flex;
+	  flex-wrap: wrap;
 	}
-	.product-details,
-	.product-price {
+	.product-img {
 	  flex: 0 0 100%;
 	  max-width: 100%;
 	}
