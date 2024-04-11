@@ -3602,49 +3602,58 @@ ol {
 
   /* product mobile */
   .product-card {
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	margin-bottom: 20px;
-	overflow: hidden;
-  }
-  .product-img {
-	flex: 0 0 30%;
-	max-width: 30%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  .product-details {
-	flex: 0 0 70%;
-	max-width: 70%;
-	padding: 20px;
-  }
-  .product-price {
-	flex: 0 0 100%;
-	max-width: 100%;
-	padding: 20px;
-	background-color: #f8f9fa;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-  }
-  .product-price h5 {
-	margin-bottom: 10px;
-  }
-  .buy-now-btn {
-	width: 100%;
-  }
-  @media (max-width: 767px) {
-	.product-card {
-	  display: flex;
-	  flex-wrap: wrap;
-	}
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex; /* Make the card a flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.product-img {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.product-details {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.product-price {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product-price h5 {
+    margin-bottom: 10px;
+}
+
+.buy-now-btn {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
 	.product-img {
-	  flex: 0 0 100%;
-	  max-width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+	.product-details ul li {
+		margin-left: 15px;
 	}
-	.product-details {
-	  padding-left: 50px;
-	}
-  }
+    .product-img,
+    .product-details,
+    .product-price {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
