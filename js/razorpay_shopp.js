@@ -1,9 +1,10 @@
 document.querySelectorAll('.paymentButton').forEach(function(element) {
     element.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default action of anchor tag
-        
-        // Retrieve the price from the clicked element's data attribute
-        var price = parseInt(this.querySelector('.latest-product__item__text span').textContent.trim().replace('₹', ''));
+
+        // Retrieve the price from the product details
+        var priceText = document.querySelector('.product__details__price').textContent.trim();
+        var price = parseInt(priceText.replace('₹', ''));
 
         // Ask for confirmation before proceeding
         if (confirm("Are you sure you want to make the payment?")) {

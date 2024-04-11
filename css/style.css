@@ -3615,7 +3615,7 @@ ol {
     max-width: 30%;
 }
 
-.product-details {
+.product-details1 {
     flex: 0 0 50%;
     max-width: 50%;
     padding: 20px;
@@ -3651,11 +3651,11 @@ ol {
         display: flex;
         justify-content: center;
     }
-	.product-details ul li {
+	.product-details1 ul li {
 		margin-left: 15px;
 	}
     .product-img,
-    .product-details,
+    .product-details1,
     .product-price {
         flex: 0 0 100%;
         max-width: 100%;
