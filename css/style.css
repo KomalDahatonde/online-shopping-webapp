@@ -3632,3 +3632,17 @@ ol {
   .buy-now-btn {
 	width: 100%;
   }
+  @media (max-width: 767px) {
+	.product-img {
+	  flex: 0 0 100%;
+	  max-width: 100%;
+	}
+	.product-details {
+	  flex: 0 0 100%;
+	  max-width: 100%;
+	}
+	.product-price {
+	  flex: 0 0 100%;
+	  max-width: 100%;
+	}
+  }
