@@ -1,0 +1,37 @@
+/* Custom Styles */
+.card {
+    border: 1px solid #D98880;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    color: white;
+    background-color: #D98880;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-text a {
+    color: #D98880;
+}
+.card-text a:hover {
+    text-decoration: none;
+    color: #C0392B;
+}
+.btn-block{
+    background-color: #D98880;
+    color: white;
+    border: none;
+}
+.btn-block:hover{
+    background-color: white;
+    color: #D98880;
+    border: 1px solid #D98880;
+}
