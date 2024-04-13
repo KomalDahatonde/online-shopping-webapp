@@ -1,4 +1,11 @@
 /* Custom Styles */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 .card {
     border: 1px solid #D98880;
     border-radius: 10px;
