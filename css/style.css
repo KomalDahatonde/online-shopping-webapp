@@ -2646,6 +2646,8 @@ ol {
 
 .footer__about__logo {
 	margin-bottom: 15px;
+	height: 50px;
+	width: 100px;
 }
 
 .footer__about__logo a {
