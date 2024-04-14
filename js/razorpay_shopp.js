@@ -26,8 +26,8 @@ document.querySelectorAll('.paymentButton').forEach(function(element) {
                 "description": "Purchase Description",
                 "image": "https://example.com/your_logo.png",
                 "handler": function(response) {
-                    alert('Payment successful. Payment ID: ' + response.razorpay_payment_id);
-                    // You can handle the success callback here, like updating the database or redirecting to a thank you page
+                    alert('Payment successful for ' + productName + '. Payment ID: ' + response.razorpay_payment_id);
+                    // Handle the success callback here, like updating the database or redirecting to a thank you page
                 },
                 "prefill": {
                     "name": "Customer Name",
