@@ -32,10 +32,10 @@ document.querySelectorAll('.paymentButton').forEach(function(element) {
                 "prefill": {
                     "name": "Customer Name",
                     "email": "customer@example.com",
-                    "contact": "9999999999"
+                    "contact": contact
                 },
                 "notes": {
-                    "address": "Customer Address"
+                    "address": add
                 },
                 "theme": {
                     "color": "#9F496E"
