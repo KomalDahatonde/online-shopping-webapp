@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REgistration Page</title>
+    <title>Registration Page</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/login-reg.css">
+    <link rel="icon" href="./img/icon.png">
+    <style>
+        /* Custom CSS for adjusting layout */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
@@ -25,25 +32,41 @@
                     <div class="card-body">
                         <h5 class="card-title text-center">Registration</h5>
                         <form>
-                            <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="text" class="form-control" id="name" name="email" required placeholder="Enter Name">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" required placeholder="Enter Name">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required placeholder="Enter E-mail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password" required placeholder="Enter Password">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="registerGender">Gender</label>
+                                        <select class="form-control" id="registerGender">
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" name="email" required placeholder="Enter E-mail">
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password:</label>
-                                <input type="password" class="form-control" id="password" name="password" required placeholder="Enter Password">
-                            </div>
-                            <div class="form-group">
-                                <label for="registerGender">Gender</label>
-                                <select class="form-control" id="registerGender">
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
-                                </select>
+                                <label for="address">Address</label>
+                                <textarea name="address" id="address" cols="50" rows="2" class="form-control"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
                         </form>
@@ -56,6 +79,5 @@
         </div>
     </div>
     <!-- Custom JavaScript -->
-    
 </body>
 </html>
