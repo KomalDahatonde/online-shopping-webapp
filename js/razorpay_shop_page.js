@@ -32,6 +32,22 @@ document.querySelectorAll('.paymentButton').forEach(function(element) {
                 "handler": function(response) {
                     alert('Payment successful for ' + productName + '. Payment ID: ' + response.razorpay_payment_id);
                         // Handle the success callback here, like updating the database or redirecting to a thank you page
+
+                        var order = {
+                            paymentId: response.razorpay_payment_id,
+                            productName: productName,
+                            status: 'success' // You can set the status as required
+                        };
+
+                        // Retrieve existing orders from localStorage or initialize as empty array
+                        var orders = JSON.parse(localStorage.getItem('orders')) || [];
+                        // Push the new order to the array
+                        orders.push(order);
+                        // Store the updated orders back to localStorage
+                        localStorage.setItem('orders', JSON.stringify(orders));
+
+                        // Redirect to order.html after successful payment
+                        window.location.href = "shop-details.html";
                     },
                 "prefill": {
                     "name": "Customer Name",

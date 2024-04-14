@@ -169,7 +169,28 @@
 
     <h5 style="font-size: 100px; text-align: center;">order list</h5>
 
+    
 
+    <div id="orderDetails"></div>
+
+    <script>
+        window.onload = function() {
+            // Retrieve order details from localStorage
+            var orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+            // Create divs for each order
+            var orderDetailsDiv = document.getElementById('orderDetails');
+            orders.forEach(function(order) {
+                var orderDiv = document.createElement('div');
+                orderDiv.innerHTML = "<h2>Payment Details</h2>" +
+                                    "<p><strong>Payment ID:</strong> " + order.paymentId + "</p>" +
+                                    "<p><strong>Product Name:</strong> " + order.productName + "</p>" +
+                                    "<p><strong>Status:</strong> " + order.status + "</p>";
+                // Append the div to the orderDetails container
+                orderDetailsDiv.appendChild(orderDiv);
+            });
+        };
+    </script>
 
 
     <!-- Footer Section Begin -->
@@ -234,6 +255,7 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
+    <script src="./js/razorpay_shop_page2.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
