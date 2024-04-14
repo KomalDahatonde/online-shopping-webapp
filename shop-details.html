@@ -23,6 +23,16 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        .order-container {
+	        margin: 50px;
+	        border-bottom: 3px solid #000;
+	        padding-bottom: 20px;
+	        background-color: rgb(243, 243, 243);
+	        color: white;
+	        padding: 20px;
+}
+    </style>
 </head>
 
 <body>
@@ -167,11 +177,11 @@
     
 
 
-    <h5 style="font-size: 100px; text-align: center;">order list</h5>
+    <h2 style="font-size: 50px; text-align: center; margin-top: 20px;">order list</h2>
 
     
 
-    <div id="orderDetails"></div>
+    <div id="orderDetails" class="order-list"></div>
 
     <script>
         window.onload = function() {
@@ -182,6 +192,7 @@
             var orderDetailsDiv = document.getElementById('orderDetails');
             orders.forEach(function(order) {
                 var orderDiv = document.createElement('div');
+                orderDiv.classList.add('order-container');
                 orderDiv.innerHTML = "<h2>Payment Details</h2>" +
                                     "<p><strong>Payment ID:</strong> " + order.paymentId + "</p>" +
                                     "<p><strong>Product Name:</strong> " + order.productName + "</p>" +
