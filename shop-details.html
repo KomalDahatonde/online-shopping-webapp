@@ -31,6 +31,11 @@
 	        background-color: rgb(243, 243, 243);
 	        color: white;
 	        padding: 20px;
+            box-shadow: 5px 8px 10px black;
+            border-radius: 30px 5px 30px 5px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
     }
     .order-list-text{
         font-size: 50px; 
@@ -206,24 +211,28 @@
 
     <script>
         window.onload = function() {
-            // Retrieve order details from localStorage
-            var orders = JSON.parse(localStorage.getItem('orders')) || [];
+    // Retrieve order details from localStorage
+    var orders = JSON.parse(localStorage.getItem('orders')) || [];
 
-            // Create divs for each order
-            var orderDetailsDiv = document.getElementById('orderDetails');
-            orders.forEach(function(order) {
-                var orderDiv = document.createElement('div');
-                orderDiv.classList.add('order-container');
-                orderDiv.innerHTML = "<h2>Payment Details</h2>" +
-                                    "<p><strong>Payment ID:</strong> " + order.paymentId + "</p>" +
-                                    "<p><strong>Product Name:</strong> " + order.productName + "</p>" +
-                                    "<p><strong>Address:</strong> " + order.address + "</p>" +
-                                    "<p><strong>Mobile Number:</strong> " + order.contact + "</p>" +
-                                    "<p><strong>Payment Status:</strong> " + order.status + "</p>";
-                // Append the div to the orderDetails container
-                orderDetailsDiv.appendChild(orderDiv);
-            });
-        };
+    // Create divs for each order
+    var orderDetailsDiv = document.getElementById('orderDetails');
+    orders.forEach(function(order) {
+        var orderDiv = document.createElement('div');
+        orderDiv.classList.add('order-container');
+        orderDiv.innerHTML = "<h2>Payment Details</h2>" +
+                             "<div class='order-details'>" +
+                             "<p><strong>Payment ID:</strong> " + order.paymentId + "</p>" +
+                             "<p><strong>Product Name:</strong> " + order.productName + "</p>" +
+                             "<p><strong>Product Price:</strong> " + order.amount + "</p>" +
+                             "<p><strong>Address:</strong> " + order.address + "</p>" +
+                             "<p><strong>Mobile Number:</strong> " + order.contact + "</p>" +
+                             "<p><strong>Payment Status:</strong> " + order.status + "</p>" +
+                             "</div>";
+        // Append the div to the orderDetails container
+        orderDetailsDiv.appendChild(orderDiv);
+    });
+};
+
     </script>
 
 
