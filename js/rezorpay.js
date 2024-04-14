@@ -5,8 +5,18 @@ document.querySelectorAll('.paymentButton').forEach(function(element) {
         // Retrieve the price from the clicked element's data attribute
         var price = parseInt(this.querySelector('.latest-product__item__text span').textContent.trim().replace('₹', ''));
 
+        // Retrieve the product name from the data attribute
+        var productName = this.getAttribute('data-product-name');
+
         // Ask for confirmation before proceeding
-        if (confirm("Are you sure you want to make the payment?")) {
+        var add = prompt('Enter address');
+        var contact = prompt('Enter mobile number');
+
+        // Check if address and contact are not empty and user hasn't clicked cancel
+        if (add !== null && add.trim() !== '' && contact !== null && contact.trim() !== '') { 
+            if (confirm("Are you sure you want to make the payment?")) 
+          
+        {
             var options = {
                 "key": "rzp_test_sJpyjaezMQUgYU",
                 "amount": price * 100, // Convert price to paise (100 paise = 1 INR)
@@ -36,8 +46,13 @@ document.querySelectorAll('.paymentButton').forEach(function(element) {
                      }
                  }
             };
+
+            // Set the product name in the description
+            options.description = "Purchase of " + productName;
+            
             var rzp = new Razorpay(options);
             rzp.open();
         }
+    }
     });
 });

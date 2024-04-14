@@ -18,7 +18,10 @@ document.querySelectorAll('.paymentButton2').forEach(function(element) {
 
         // Check if address and contact are not empty and user hasn't clicked cancel
         if (add !== null && add.trim() !== '' && contact !== null && contact.trim() !== '') { 
-            if (confirm("Are you sure you want to make the payment?")) {
+            if (confirm("Are you sure you want to make the payment?")) 
+            
+            
+            {
                 var options = {
                     "key": "rzp_test_sJpyjaezMQUgYU",
                     "amount": amountInPaise,
