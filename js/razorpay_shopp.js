@@ -32,7 +32,10 @@ document.querySelectorAll('.paymentButton').forEach(function(element) {
                     var order = {
                         paymentId: response.razorpay_payment_id,
                         productName: productName,
+                        address: add, // Include address in the order object
+                        contact: contact, // Include contact number in the order object
                         status: 'success' // You can set the status as required
+
                     };
 
                     // Retrieve existing orders from localStorage or initialize as empty array
