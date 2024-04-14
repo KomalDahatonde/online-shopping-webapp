@@ -27,7 +27,7 @@ document.querySelectorAll('.paymentButton').forEach(function(element) {
                     "address": "Customer Address"
                 },
                 "theme": {
-                    "color": "#9F496E"
+                    "color": "#D05663"
                 },
                 "modal": {
                      "ondismiss": function() {
