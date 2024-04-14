@@ -130,7 +130,7 @@ ol {
 	right: 0;
 	height: 4px;
 	width: 80px;
-	background: #8CA9D3;
+	background: #9F496E;
 	content: "";
 	margin: 0 auto;
 }
@@ -168,7 +168,7 @@ ol {
 	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: 700;
-	background: #8CA9D3;
+	background: #9F496E;
 	letter-spacing: 2px;
 }
 
@@ -179,7 +179,7 @@ ol {
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 13px 30px 12px;
-	background: #8CA9D3;
+	background: #9F496E;
 	border: none;
 	transition: 1s;
 }
@@ -460,7 +460,7 @@ ol {
 }
 
 .header__menu ul li .header__menu__dropdown li:hover>a {
-	color: #8CA9D3;
+	color: #9F496E;
 }
 
 .header__menu ul li .header__menu__dropdown li a {
@@ -471,7 +471,7 @@ ol {
 }
 
 .header__menu ul li.active a {
-	/* color: #8CA9D3; */
+	/* color: #9F496E; */
 }1
 
 .header__menu ul li:hover .header__menu__dropdown {
@@ -481,7 +481,7 @@ ol {
 }
 
 .header__menu ul li:hover>a {
-	color: #8CA9D3;
+	color: #9F496E;
 }
 
 .header__menu ul li:last-child {
@@ -535,7 +535,7 @@ ol {
 .header__cart ul li a span {
 	height: 13px;
 	width: 13px;
-	background: #8CA9D3;
+	background: #9F496E;
 	font-size: 10px;
 	color: #ffffff;
 	line-height: 13px;
@@ -598,7 +598,7 @@ ol {
 }
 
 .hero__categories__all {
-	background: #8CA9D3;
+	background: #9F496E;
 	position: relative;
 	padding: 10px 25px 10px 40px;
 	cursor: pointer;
@@ -714,7 +714,7 @@ ol {
 
 .hero__search__phone__icon {
 	font-size: 18px;
-	color: #8CA9D3;
+	color: #9F496E;
 	height: 50px;
 	width: 50px;
 	background: #f5f5f5;
@@ -752,7 +752,7 @@ ol {
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 4px;
-	color: #8CA9D3;
+	color: #9F496E;
 }
 
 .hero__text h2 {
@@ -854,7 +854,7 @@ ol {
 	bottom: -2px;
 	width: 100%;
 	height: 2px;
-	background: #8CA9D3;
+	background: #9F496E;
 	content: "";
 	opacity: 0;
 }
@@ -902,8 +902,8 @@ ol {
 }
 
 .featured__item__pic__hover li:hover a {
-	background: #8CA9D3;
-	border-color: #8CA9D3;
+	background: #9F496E;
+	border-color: #9F496E;
 }
 
 .featured__item__pic__hover li:hover a i {
@@ -1338,8 +1338,8 @@ ol {
 }
 
 .product__item__pic__hover li:hover a {
-	background: #8CA9D3;
-	border-color: #8CA9D3;
+	background: #9F496E;
+	border-color: #9F496E;
 }
 
 .product__item__pic__hover li:hover a i {
@@ -1537,7 +1537,7 @@ ol {
 }
 
 .filter__option span:hover {
-	color: #8CA9D3;
+	color: #9F496E;
 }
 
 .product__item {
@@ -1578,8 +1578,8 @@ ol {
 }
 
 .product__item__pic__hover li:hover a {
-	background: #8CA9D3;
-	border-color: #8CA9D3;
+	background: #9F496E;
+	border-color: #9F496E;
 }
 
 .product__item__pic__hover li:hover a i {
@@ -1659,8 +1659,8 @@ ol {
 
 .product__pagination a:hover,
 .blog__pagination a:hover {
-	background: #8CA9D3;
-	border-color: #8CA9D3;
+	background: #9F496E;
+	border-color: #9F496E;
 	color: #ffffff;
 }
 
@@ -2168,8 +2168,8 @@ ol {
 }
 
 .checkout__input__checkbox label input:checked~.checkmark {
-	background: #8CA9D3;
-	border-color: #8CA9D3;
+	background: #9F496E;
+	border-color: #9F496E;
 }
 
 .checkout__input__checkbox label input:checked~.checkmark:after {
@@ -2396,7 +2396,7 @@ ol {
 }
 
 .blog__sidebar__item ul li a:hover {
-	color: #8CA9D3;
+	color: #9F496E;
 }
 
 .blog__sidebar__search {
@@ -2616,7 +2616,7 @@ ol {
 }
 
 .blog__details__widget .blog__details__social a:hover {
-	color: #8CA9D3;
+	color: #9F496E;
 }
 
 .blog__details__widget .blog__details__social a:last-child {
@@ -2736,7 +2736,7 @@ ol {
 }
 
 .footer__widget .footer__widget__social a:hover {
-	background: #8CA9D3;
+	background: #9F496E;
 	color: #ffffff;
 	border-color: #ffffff;
 }
@@ -2774,7 +2774,7 @@ ol {
 
 .contact__widget span {
 	font-size: 36px;
-	color: #8CA9D3;
+	color: #9F496E;
 }
 
 .contact__widget h4 {
@@ -2813,7 +2813,7 @@ ol {
 
 .map .map-inside i {
 	font-size: 48px;
-	color: #8CA9D3;
+	color: #9F496E;
 	position: absolute;
 	bottom: -75px;
 	left: 50%;
@@ -3070,7 +3070,7 @@ ol {
 	.humberger__menu__cart ul li a span {
 		height: 13px;
 		width: 13px;
-		background: #8CA9D3;
+		background: #9F496E;
 		font-size: 10px;
 		color: #ffffff;
 		line-height: 13px;
@@ -3136,7 +3136,7 @@ ol {
 		-webkit-border-radius: 0;
 		border-radius: 0;
 		background: transparent;
-		color: #8CA9D3;
+		color: #9F496E;
 	}
 	.humberger__menu__wrapper .slicknav_nav .slicknav_row,
 	.humberger__menu__wrapper .slicknav_nav a {
@@ -3328,7 +3328,7 @@ ol {
 	.humberger__menu__cart ul li a span {
 		height: 13px;
 		width: 13px;
-		background: #8CA9D3;
+		background: #9F496E;
 		font-size: 10px;
 		color: #ffffff;
 		line-height: 13px;
@@ -3394,7 +3394,7 @@ ol {
 		-webkit-border-radius: 0;
 		border-radius: 0;
 		background: transparent;
-		color: #8CA9D3;
+		color: #9F496E;
 	}
 	.humberger__menu__wrapper .slicknav_nav .slicknav_row,
 	.humberger__menu__wrapper .slicknav_nav a {
@@ -3489,7 +3489,7 @@ ol {
 .typing-text {
     font-size: 35px;
     font-family: Arial, sans-serif;
-    color: #8CA9D3;
+    color: #9F496E;
     margin-bottom: 20px;
     position: relative;
   }
@@ -3539,7 +3539,7 @@ ol {
 	.typing-text {
 		font-size: 30px;
 		font-family: Arial, sans-serif;
-		color: #8CA9D3;
+		color: #9F496E;
 		margin-bottom: 20px;
 		position: relative;
 	  }
@@ -3549,7 +3549,7 @@ ol {
 	.typing-text {
 		font-size: 25px;
 		font-family: Arial, sans-serif;
-		color: #8CA9D3;
+		color: #9F496E;
 		margin-bottom: 20px;
 		position: relative;
 	  }
@@ -3559,7 +3559,7 @@ ol {
 	.typing-text {
 		font-size: 20px;
 		font-family: Arial, sans-serif;
-		color: #8CA9D3;
+		color: #9F496E;
 		margin-bottom: 20px;
 		position: relative;
 	  }
@@ -3569,7 +3569,7 @@ ol {
 	.typing-text {
 		font-size: 16px;
 		font-family: Arial, sans-serif;
-		color: #8CA9D3;
+		color: #9F496E;
 		margin-bottom: 20px;
 		position: relative;
 	  }
@@ -3580,7 +3580,7 @@ ol {
 	height: 30px;
 	width: 100px; 
 	border: none; 
-	background-color: #8CA9D3; 
+	background-color: #9F496E; 
 	color: white; 
 	margin-left:  0px; 
 	font-size: 15px; 
@@ -3599,7 +3599,7 @@ ol {
 	height: 25px;
 	width: 50px;
 	color: white;
-	background-color: #8CA9D3;
+	background-color: #9F496E;
 	border: none;
 	border-radius: 5px;
   }
@@ -3670,7 +3670,7 @@ ol {
 	height: 35px;
 	width: 120px;
 	border: none;
-	background-color: #8CA9D3;
+	background-color: #9F496E;
 	color: white;
 	font-weight: bold;
 	border-radius: 5px;

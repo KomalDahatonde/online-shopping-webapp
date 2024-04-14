@@ -7,14 +7,14 @@ body{
     height: 100vh;
 }
 .card {
-    border: 1px solid #8CA9D3;
+    border: 1px solid #9F496E;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card-title {
     color: white;
-    background-color: #8CA9D3;
+    background-color: #9F496E;
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: bolder;
@@ -26,19 +26,19 @@ body{
 }
 
 .card-text a {
-    color: #8CA9D3;
+    color: #9F496E;
 }
 .card-text a:hover {
     text-decoration: none;
     color: #C0392B;
 }
 .btn-block{
-    background-color: #8CA9D3;
+    background-color: #9F496E;
     color: white;
     border: none;
 }
 .btn-block:hover{
     background-color: white;
-    color: #8CA9D3;
-    border: 1px solid #8CA9D3;
+    color: #9F496E;
+    border: 1px solid #9F496E;
 }
