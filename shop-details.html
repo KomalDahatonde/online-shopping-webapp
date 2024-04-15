@@ -35,8 +35,8 @@
             box-shadow: 5px 8px 10px #9F496E;
             border-radius: 30px 5px 30px 5px;
             display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 10px;
+            grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+            grid-column-gap: 20px; /* Gap between columns */
     }
     .order-list-text{
         font-size: 50px; 
@@ -47,6 +47,9 @@
             .order-container {
                 padding: 10px; 
                 margin: 10px;
+                display: grid;
+                grid-template-columns: 1fr; /* Two columns with equal width */
+                grid-column-gap: 20px; /* Gap between columns */
             }
             h2{
                 font-size: 20px;
@@ -211,7 +214,31 @@
     <div id="orderDetails" class="order-list"></div>
 
     <script>
-        window.onload = function() {
+//         window.onload = function() {
+//     // Retrieve order details from localStorage
+//     var orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+//     // Create divs for each order
+//     var orderDetailsDiv = document.getElementById('orderDetails');
+//     orders.forEach(function(order) {
+//         var orderDiv = document.createElement('div');
+//         orderDiv.classList.add('order-container');
+//         orderDiv.innerHTML = "<h2>Order Details</h2>" +
+//                              "<div class='order-details'>" +
+//                              "<p><strong>Payment ID:</strong> " + order.paymentId + "</p>" +
+//                              "<p><strong>Product Name:</strong> " + order.productName + "</p>" +
+//                              "<p><strong>Product Price:</strong> ₹" + order.amount + "</p>" +
+//                              "<p><strong>Address:</strong> " + order.address + "</p>" +
+//                              "<p><strong>Mobile Number:</strong> " + order.contact + "</p>" +
+//                              "<p><strong>Order Date:</strong> " + order.date + "</p>" +
+//                              "<p><strong>Estimated delivery Date:</strong> " + order.estimatedDeliveryDate + "</p>" +
+//                              "<p><strong>Payment Status:</strong> " + order.status + "</p>" +
+//                              "</div>";
+//         // Append the div to the orderDetails container
+//         orderDetailsDiv.appendChild(orderDiv);
+//     });
+// };
+window.onload = function() {
     // Retrieve order details from localStorage
     var orders = JSON.parse(localStorage.getItem('orders')) || [];
 
@@ -220,16 +247,31 @@
     orders.forEach(function(order) {
         var orderDiv = document.createElement('div');
         orderDiv.classList.add('order-container');
-        orderDiv.innerHTML = "<h2>Order Details</h2>" +
-                             "<div class='order-details'>" +
-                             "<p><strong>Payment ID:</strong> " + order.paymentId + "</p>" +
-                             "<p><strong>Product Name:</strong> " + order.productName + "</p>" +
-                             "<p><strong>Product Price:</strong> ₹" + order.amount + "</p>" +
-                             "<p><strong>Address:</strong> " + order.address + "</p>" +
-                             "<p><strong>Mobile Number:</strong> " + order.contact + "</p>" +
-                             "<p><strong>Payment Status:</strong> " + order.status + "</p>" +
-                             "</div>";
-        // Append the div to the orderDetails container
+
+        // Create two columns for each order detail pair
+        var leftColumn = document.createElement('div');
+        var rightColumn = document.createElement('div');
+
+        leftColumn.classList.add('order-column');
+        rightColumn.classList.add('order-column');
+
+        // Assign order details to each column
+        leftColumn.innerHTML = "<p><strong>Payment ID:</strong> " + order.paymentId + "</p>" +
+                                "<p><strong>Product Name:</strong> " + order.productName + "</p>" +
+                                "<p><strong>Product Price:</strong> ₹" + order.amount + "</p>" +
+                                "<p><strong>Payment Status:</strong> " + order.status + "</p>";
+                                
+
+        rightColumn.innerHTML = "<p><strong>Address:</strong> " + order.address + "</p>" +
+                                "<p><strong>Mobile Number:</strong> " + order.contact + "</p>" +
+                                "<p><strong>Order Date:</strong> " + order.date + "</p>" +
+                                "<p><strong>Estimated delivery Date:</strong> " + order.estimatedDeliveryDate + "</p>";
+                              
+        // Append columns to order container
+        orderDiv.appendChild(leftColumn);
+        orderDiv.appendChild(rightColumn);
+
+        // Append the order container to the orderDetails container
         orderDetailsDiv.appendChild(orderDiv);
     });
 };

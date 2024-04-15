@@ -22,6 +22,17 @@ document.querySelectorAll('.paymentButton').forEach(function(element) {
            
         
         {
+
+            // Get the current date
+            var currentDate = new Date();
+            var formattedDate = currentDate.getDate() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getFullYear();
+
+             // Calculate estimated delivery date (2 days after the order date)
+             var estimatedDeliveryDate = new Date(currentDate);
+             estimatedDeliveryDate.setDate(currentDate.getDate() + 2); // Adding 2 days
+
+             var formattedEstimatedDeliveryDate = estimatedDeliveryDate.getDate() + "-" + (estimatedDeliveryDate.getMonth() + 1) + "-" + estimatedDeliveryDate.getFullYear();
+
             var options = {
                 "key": "rzp_test_sJpyjaezMQUgYU",
                 "amount": amountInPaise,
@@ -32,13 +43,18 @@ document.querySelectorAll('.paymentButton').forEach(function(element) {
                 "handler": function(response) {
                     alert('Payment successful for ' + productName + '. Payment ID: ' + response.razorpay_payment_id);
                         // Handle the success callback here, like updating the database or redirecting to a thank you page
-
+                         // Get the current date
+                         var currentDate = new Date();
+                         var formattedDate = currentDate.getDate() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getFullYear();
+ 
                         var order = {
                             paymentId: response.razorpay_payment_id,
                             productName: productName,
                             amount: price,
                             address: add, // Include address in the order object
                             contact: contact, // Include contact number in the order object
+                            date: formattedDate, 
+                            estimatedDeliveryDate: formattedEstimatedDeliveryDate, // Include estimated delivery date
                             status: 'success' // You can set the status as required
                         };
 
