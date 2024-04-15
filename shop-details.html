@@ -214,30 +214,6 @@
     <div id="orderDetails" class="order-list"></div>
 
     <script>
-//         window.onload = function() {
-//     // Retrieve order details from localStorage
-//     var orders = JSON.parse(localStorage.getItem('orders')) || [];
-
-//     // Create divs for each order
-//     var orderDetailsDiv = document.getElementById('orderDetails');
-//     orders.forEach(function(order) {
-//         var orderDiv = document.createElement('div');
-//         orderDiv.classList.add('order-container');
-//         orderDiv.innerHTML = "<h2>Order Details</h2>" +
-//                              "<div class='order-details'>" +
-//                              "<p><strong>Payment ID:</strong> " + order.paymentId + "</p>" +
-//                              "<p><strong>Product Name:</strong> " + order.productName + "</p>" +
-//                              "<p><strong>Product Price:</strong> ₹" + order.amount + "</p>" +
-//                              "<p><strong>Address:</strong> " + order.address + "</p>" +
-//                              "<p><strong>Mobile Number:</strong> " + order.contact + "</p>" +
-//                              "<p><strong>Order Date:</strong> " + order.date + "</p>" +
-//                              "<p><strong>Estimated delivery Date:</strong> " + order.estimatedDeliveryDate + "</p>" +
-//                              "<p><strong>Payment Status:</strong> " + order.status + "</p>" +
-//                              "</div>";
-//         // Append the div to the orderDetails container
-//         orderDetailsDiv.appendChild(orderDiv);
-//     });
-// };
 window.onload = function() {
     // Retrieve order details from localStorage
     var orders = JSON.parse(localStorage.getItem('orders')) || [];
@@ -245,6 +221,11 @@ window.onload = function() {
     // Create divs for each order
     var orderDetailsDiv = document.getElementById('orderDetails');
     orders.forEach(function(order) {
+        createOrderContainer(order, orderDetailsDiv);
+    });
+
+    // Function to create order container
+    function createOrderContainer(order, parentDiv) {
         var orderDiv = document.createElement('div');
         orderDiv.classList.add('order-container');
 
@@ -260,20 +241,19 @@ window.onload = function() {
                                 "<p><strong>Product Name:</strong> " + order.productName + "</p>" +
                                 "<p><strong>Product Price:</strong> ₹" + order.amount + "</p>" +
                                 "<p><strong>Payment Status:</strong> " + order.status + "</p>";
-                                
 
         rightColumn.innerHTML = "<p><strong>Address:</strong> " + order.address + "</p>" +
                                 "<p><strong>Mobile Number:</strong> " + order.contact + "</p>" +
                                 "<p><strong>Order Date:</strong> " + order.date + "</p>" +
                                 "<p><strong>Estimated delivery Date:</strong> " + order.estimatedDeliveryDate + "</p>";
-                              
+
         // Append columns to order container
         orderDiv.appendChild(leftColumn);
         orderDiv.appendChild(rightColumn);
 
-        // Append the order container to the orderDetails container
-        orderDetailsDiv.appendChild(orderDiv);
-    });
+        // Prepend the order container to the orderDetails container
+        parentDiv.insertBefore(orderDiv, parentDiv.firstChild);
+    }
 };
 
     </script>
